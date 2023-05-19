@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 /// An implementation of [SendToBackgroundPlatform] that uses method channels.
-class MethodChannelSendToBackground  {
+class SendToBackground  {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
   static const MethodChannel methodChannel = MethodChannel('send_to_background');
