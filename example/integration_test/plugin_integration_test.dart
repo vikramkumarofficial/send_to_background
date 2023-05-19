@@ -9,12 +9,12 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:send_to_background/send_to_background_method_channel.dart';
+import 'package:send_to_background/send_to_background.dart';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('getPlatformVersion test', (WidgetTester tester) async {
-  MethodChannelSendToBackground.sendToBackground();
+  SendToBackground.sendToBackground();
   });
 }

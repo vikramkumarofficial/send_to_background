@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:send_to_background/send_to_background_method_channel.dart';
+import 'package:send_to_background/send_to_background.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
           child: ElevatedButton(
             child: const Icon(Icons.arrow_back),
             onPressed: () {
-              MethodChannelSendToBackground.sendToBackground();
+              SendToBackground.sendToBackground();
             },
           ),
         ),
