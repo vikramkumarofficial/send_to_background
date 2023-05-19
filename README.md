@@ -7,7 +7,9 @@ Add send_to_background to your pubspec.yaml file:
 
 ```yaml
 dependencies:
-    send_to_background: ^0.0.1
+  send_to_background:
+    git:
+      url: https://github.com/gkdgo/send_to_background.git
 ```
 Import send_to_background in files that it will be used:
 
