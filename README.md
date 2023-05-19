@@ -1,15 +1,55 @@
-# send_to_background
+# SendToBackground
 
-A new Flutter project.
+A Flutter plugin to send your app to background.
 
-## Getting Started
+# Installing
+Add send_to_background to your pubspec.yaml file:
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+```yaml
+dependencies:
+    send_to_background: ^0.0.1
+```
+Import send_to_background in files that it will be used:
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```dart
+import 'package:send_to_background/send_to_background_method_channel.dart';
+```
 
+# Usage
+```dart
+import 'package:flutter/material.dart';
+import 'package:send_to_background/send_to_background_method_channel.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('sendToBackground'),
+        ),
+        body: Center(
+          child: ElevatedButton(
+            child: const Icon(Icons.arrow_back),
+            onPressed: () {
+              MethodChannelSendToBackground.sendToBackground();
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+```

@@ -25,7 +25,7 @@ class _MyAppState extends State<MyApp> {
           child: ElevatedButton(
             child: const Icon(Icons.arrow_back),
             onPressed: () {
-              MethodChannelSendToBackground.sendToBackground(); // 使用插件方法
+              MethodChannelSendToBackground.sendToBackground();
             },
           ),
         ),
