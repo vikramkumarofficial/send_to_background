@@ -1,5 +1,5 @@
 name: send_to_background
-description: send app to background
+description: A Flutter plugin to send your app to background easily, mostly used when you want to keep your app running in background.
 version: 0.0.1
 homepage: https://github.com/gkdgo/send_to_background
 
