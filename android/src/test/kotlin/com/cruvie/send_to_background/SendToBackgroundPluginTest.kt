@@ -1,4 +1,4 @@
-package com.minka.send_to_background
+package com.cruvie.send_to_background
 
 import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel

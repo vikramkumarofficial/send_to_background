@@ -1,4 +1,4 @@
-group 'com.minka.send_to_background'
+group 'com.cruvie.send_to_background'
 version '1.0-SNAPSHOT'
 //加载本地flutter sdk
 def localProperties = new Properties()

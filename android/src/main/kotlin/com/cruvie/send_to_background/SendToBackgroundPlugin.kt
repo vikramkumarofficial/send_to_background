@@ -1,4 +1,4 @@
-package com.minka.send_to_background
+package com.cruvie.send_to_background
 
 import android.app.Activity
 import io.flutter.embedding.engine.plugins.FlutterPlugin

@@ -1,10 +1,10 @@
 name: send_to_background
 description: A Flutter plugin to send your app to background easily, mostly used when you want to keep your app running in background.
 version: 0.0.2
-homepage: https://github.com/gkdgo/send_to_background
+homepage: https://github.com/cruvie/send_to_background
 
 environment:
-  sdk: '>=2.17.0 <4.0.0'
+  sdk: '>=2.17.0'
   flutter: ">=2.7.0"
 
 dependencies:
@@ -14,7 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -34,7 +34,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.minka.send_to_background
+        package: com.cruvie.send_to_background
         pluginClass: SendToBackgroundPlugin
       ios:
         pluginClass: SendToBackgroundPlugin
