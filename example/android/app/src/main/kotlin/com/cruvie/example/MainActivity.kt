@@ -1,4 +1,4 @@
-package com.cruvie.send_to_background_example
+package com.cruvie.example
 
 import io.flutter.embedding.android.FlutterActivity
 
