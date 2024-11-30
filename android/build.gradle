@@ -2,30 +2,24 @@ group 'com.cruvie.send_to_background'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.10'
+    ext.kotlin_version = '2.0.21'
     repositories {
-//        google()
-//        mavenCentral()
-        maven { url 'https://maven.aliyun.com/nexus/content/groups/public'}
-        maven { url 'https://maven.aliyun.com/repository/google'}
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://dl.google.com/dl/android/maven2/'}
+//        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        google()
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:8.7.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 allprojects {
     repositories {
-//        google()
-//        mavenCentral()
-        maven { url 'https://maven.aliyun.com/nexus/content/groups/public'}
-        maven { url 'https://maven.aliyun.com/repository/google'}
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://dl.google.com/dl/android/maven2/'}
+//        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public/' }
+        google()
+        mavenCentral()
     }
 }
 
@@ -37,15 +31,15 @@ android {
         namespace 'com.cruvie.send_to_background'
     }
 
-    compileSdkVersion 33
+    compileSdk = 34
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_17
     }
 
     sourceSets {
@@ -54,7 +48,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 19
+        minSdk = 21
     }
 
     dependencies {
@@ -73,23 +67,4 @@ android {
             }
         }
     }
-}
-//获取local.properties配置文件
-def localProperties = new Properties()
-def localPropertiesFile = rootProject.file('local.properties')
-if (localPropertiesFile.exists()) {
-    localPropertiesFile.withReader('UTF-8') { reader ->
-        localProperties.load(reader)
-    }
-}
-//获取flutter的sdk路径
-def flutterRoot = localProperties.getProperty('flutter.sdk')
-if (flutterRoot == null) {
-    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
-}
-
-dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    compileOnly files("$flutterRoot/bin/cache/artifacts/engine/android-arm/flutter.jar")
-    compileOnly 'androidx.annotation:annotation:1.1.0'
 }
