@@ -1,8 +1,10 @@
 # SendToBackground
 
 A Flutter plugin to send your app to background.
-![ios.gif](readme/ios.gif)
+![ios.gif](https://github.com/cruvie/send_to_background/blob/master/readme/ios.gif)
+
 # Usage
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:send_to_background/send_to_background.dart';
