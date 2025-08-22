@@ -44,7 +44,7 @@ class SendToBackgroundPlugin : FlutterPlugin, MethodCallHandler,ActivityAware {
     // Prevent crashes by implementing an empty method
   }
 
-  override fun onReattachedToActivityForConfigChanges(p0: ActivityPluginBinding) {
+  override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
     activity = binding.activity
   }
 }
